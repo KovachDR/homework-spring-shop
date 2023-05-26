@@ -9,7 +9,7 @@ import java.util.List;
 @Component
 @SessionScope
 public class Cart {
-private final List<String> items;
+private final List<Integer> items;
 
 
     public Cart() {
@@ -17,11 +17,11 @@ private final List<String> items;
     }
 
 
-    public List<String> addItems(List<String> ids) {
+    public List<Integer> addItems(List<Integer> ids) {
         this.items.addAll(ids);
         return this.items;
     }
-    public List<String> getItems() {
+    public List<Integer> getItems() {
         return this.items;
     }
 

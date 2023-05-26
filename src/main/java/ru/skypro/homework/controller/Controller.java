@@ -19,12 +19,12 @@ public class Controller {
     }
 
     @GetMapping("/add")
-    public List<String> addItems(@RequestParam List<String> ids) {
+    public List<Integer> addItems(@RequestParam List<Integer> ids) {
         return service.addItems(ids);
     }
 
     @GetMapping("/get")
-    public List<String> getItems() {
+    public List<Integer> getItems() {
         return service.getItems();
     }
 }

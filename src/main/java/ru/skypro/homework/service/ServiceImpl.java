@@ -13,12 +13,12 @@ public class ServiceImpl implements Service{
     }
 
     @Override
-    public List<String> addItems(List<String> ids) {
+    public List<Integer> addItems(List<Integer> ids) {
         return cart.addItems(ids);
     }
 
     @Override
-    public List<String> getItems() {
+    public List<Integer> getItems() {
         return cart.getItems();
     }
 }

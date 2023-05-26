@@ -4,6 +4,6 @@ import java.util.List;
 
 
 public interface Service {
-    List<String> addItems(List<String> ids);
-    List<String> getItems();
+    List<Integer> addItems(List<Integer> ids);
+    List<Integer> getItems();
 }
