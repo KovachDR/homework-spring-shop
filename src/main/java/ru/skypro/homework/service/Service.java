@@ -1,8 +1,9 @@
 package ru.skypro.homework.service;
 
-import java.util.Map;
+import java.util.List;
+
 
 public interface Service {
-    Map<String, Integer> addItems(String item, int count);
-    Map<String, Integer> getItems();
+    List<String> addItems(List<String> ids);
+    List<String> getItems();
 }

@@ -3,23 +3,25 @@ package ru.skypro.homework.model;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 @SessionScope
 public class Cart {
-private final Map<String,Integer> items;
+private final List<String> items;
 
 
     public Cart() {
-        items = new HashMap<>();
+        items = new ArrayList<>();
     }
 
-    public Map<String, Integer> addItems(String item, int count) {
-        this.items.put(item,count);
-        return items;
+
+    public List<String> addItems(List<String> ids) {
+        this.items.addAll(ids);
+        return this.items;
     }
-    public Map<String, Integer> getItems() {
+    public List<String> getItems() {
         return this.items;
     }
 

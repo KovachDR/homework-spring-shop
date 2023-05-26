@@ -4,10 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import ru.skypro.homework.service.Service;
 import ru.skypro.homework.service.ServiceImpl;
 
-import java.util.Map;
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/order")
@@ -19,13 +19,12 @@ public class Controller {
     }
 
     @GetMapping("/add")
-    public Map<String, Integer> addItems(@RequestParam String item,
-                                         @RequestParam int count) {
-        return service.addItems(item, count);
+    public List<String> addItems(@RequestParam List<String> ids) {
+        return service.addItems(ids);
     }
 
     @GetMapping("/get")
-    public Map<String, Integer> getItems() {
+    public List<String> getItems() {
         return service.getItems();
     }
 }
